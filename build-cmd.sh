@@ -15,8 +15,8 @@ if [ "$OSTYPE" = "cygwin" ] ; then
     export AUTOBUILD="$(cygpath -u $AUTOBUILD)"
 fi
 
-FONTCONFIG_VERSION=2.8.0
-FONTCONFIG_SOURCE_DIR="fontconfig-$FONTCONFIG_VERSION"
+FONTCONFIG_VERSION=2.11.0
+FONTCONFIG_SOURCE_DIR="fontconfig"
 
 
 # load autobuild provided shell functions and variables
@@ -28,10 +28,10 @@ pushd "$FONTCONFIG_SOURCE_DIR"
     case "$AUTOBUILD_PLATFORM" in
         "linux")
             # Prefer gcc-4.1 if available
-            if [[ -f /usr/bin/gcc-4.1 && -f /usr/bin/gcc-4.1 ]] ; then
-                export CC=/usr/bin/gcc-4.1
-                export CXX=/usr/bin/gcc-4.1
-            fi
+            # if [[ -f /usr/bin/gcc-4.1 && -f /usr/bin/gcc-4.1 ]] ; then
+            #     export CC=/usr/bin/gcc-4.1
+            #     export CXX=/usr/bin/gcc-4.1
+            # fi
             
             LDFLAGS="-m32  -L$stage/packages/lib/release" CFLAGS="-m32" CXXFLAGS="-m32" ./configure --prefix="$stage"
             make

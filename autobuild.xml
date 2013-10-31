@@ -18,9 +18,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>af1065da29fa7dd636c1d25642de960b</string>
+              <string>0ce36088a56abc2df0ae83b1acea8806</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3p-zlib-update/rev/282509/arch/Darwin/installer/zlib-1.2.8-darwin-20131016.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3p-zlib-update/rev/283219/arch/Darwin/installer/zlib-1.2.8-darwin-20131031.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -30,9 +30,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>072472fac98a5704e290109b45d102b8</string>
+              <string>a4f24d46f33f30c15300626e39feee54</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3p-zlib-update/rev/282509/arch/Linux/installer/zlib-1.2.8-linux-20131016.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3p-zlib-update/rev/283219/arch/Linux/installer/zlib-1.2.8-linux-20131031.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -42,9 +42,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>00d7f40c3c797006eea9afbf03177c08</string>
+              <string>05d83a7b233abfbc938977be04cee999</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3p-zlib-update/rev/282509/arch/CYGWIN/installer/zlib-1.2.8-windows-20131017.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3p-zlib-update/rev/283219/arch/CYGWIN/installer/zlib-1.2.8-windows-20131031.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -55,7 +55,7 @@
     <key>package_description</key>
     <map>
       <key>copyright</key>
-      <string>Copyright &lt;C2&gt;&lt;A9&gt; 2001,2003 Keith Packard</string>
+      <string>Copyright (C) 2000,2001,2002,2003,2004,2006,2007 Keith Packard, 2005 Patrick Lam, 2009 Roozbeh Pournader, 2008,2009 Red Hat, Inc., 2008 Danilo Šegan, 2012 Google, Inc.</string>
       <key>description</key>
       <string>Fontconfig is a library for configuring and customizing font access.</string>
       <key>license</key>
@@ -99,7 +99,7 @@
         </map>
       </map>
       <key>version</key>
-      <string>2.8.0</string>
+      <string>2.11.0</string>
     </map>
     <key>type</key>
     <string>autobuild</string>
