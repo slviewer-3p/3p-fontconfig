@@ -2,21 +2,18 @@
 <HTML
 ><HEAD
 ><TITLE
->FcLangSetGetLangs</TITLE
+>FcConfigSetSysRoot</TITLE
 ><META
 NAME="GENERATOR"
 CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
 REL="HOME"
 HREF="t1.html"><LINK
 REL="UP"
-TITLE="FcLangSet"
-HREF="x102.html#AEN2066"><LINK
+TITLE="FcConfig"
+HREF="x102.html#AEN2703"><LINK
 REL="PREVIOUS"
-TITLE="FcLangSetHasLang"
-HREF="fclangsethaslang.html"><LINK
-REL="NEXT"
-TITLE="FcGetLangs"
-HREF="fcgetlangs.html"></HEAD
+TITLE="FcConfigGetSysRoot"
+HREF="fcconfiggetsysroot.html"></HEAD
 ><BODY
 CLASS="REFENTRY"
 BGCOLOR="#FFFFFF"
@@ -44,7 +41,7 @@ WIDTH="10%"
 ALIGN="left"
 VALIGN="bottom"
 ><A
-HREF="fclangsethaslang.html"
+HREF="fcconfiggetsysroot.html"
 ACCESSKEY="P"
 >&#60;&#60;&#60; Previous</A
 ></TD
@@ -57,11 +54,7 @@ VALIGN="bottom"
 WIDTH="10%"
 ALIGN="right"
 VALIGN="bottom"
-><A
-HREF="fcgetlangs.html"
-ACCESSKEY="N"
->Next &#62;&#62;&#62;</A
-></TD
+>&nbsp;</TD
 ></TR
 ></TABLE
 ><HR
@@ -69,21 +62,21 @@ ALIGN="LEFT"
 WIDTH="100%"></DIV
 ><H1
 ><A
-NAME="FCLANGSETGETLANGS"
+NAME="FCCONFIGSETSYSROOT"
 ></A
->FcLangSetGetLangs</H1
+>FcConfigSetSysRoot</H1
 ><DIV
 CLASS="REFNAMEDIV"
 ><A
-NAME="AEN2300"
+NAME="AEN3441"
 ></A
 ><H2
 >Name</H2
->FcLangSetGetLangs&nbsp;--&nbsp;get the list of languages in the langset</DIV
+>FcConfigSetSysRoot&nbsp;--&nbsp;Set the system root directory</DIV
 ><DIV
 CLASS="REFSYNOPSISDIV"
 ><A
-NAME="AEN2303"
+NAME="AEN3444"
 ></A
 ><H2
 >Synopsis</H2
@@ -92,7 +85,7 @@ CLASS="FUNCSYNOPSIS"
 ><P
 ></P
 ><A
-NAME="AEN2304"
+NAME="AEN3445"
 ></A
 ><TABLE
 BORDER="0"
@@ -102,7 +95,7 @@ WIDTH="100%"
 ><TD
 ><PRE
 CLASS="FUNCSYNOPSISINFO"
->#include &#60;fontconfig.h&#62;
+>#include &#60;fontconfig/fontconfig.h&#62;
 	</PRE
 ></TD
 ></TR
@@ -111,14 +104,19 @@ CLASS="FUNCSYNOPSISINFO"
 ><CODE
 ><CODE
 CLASS="FUNCDEF"
->FcStrSet * <TT
+>void <TT
 CLASS="FUNCTION"
->FcLangSetGetLangs</TT
+>FcConfigSetSysRoot</TT
 ></CODE
->(const FcLangSet *<TT
+>(FcConfig *<TT
 CLASS="PARAMETER"
 ><I
->ls</I
+>config</I
+></TT
+>, const FcChar8 *<TT
+CLASS="PARAMETER"
+><I
+>sysroot</I
 ></TT
 >);</CODE
 ></P
@@ -129,28 +127,26 @@ CLASS="PARAMETER"
 ><DIV
 CLASS="REFSECT1"
 ><A
-NAME="AEN2311"
+NAME="AEN3454"
 ></A
 ><H2
 >Description</H2
 ><P
->Returns a string set of all languages in <TT
-CLASS="PARAMETER"
-><I
->langset</I
-></TT
->.
+>Set 'sysroot' as the system root directory. fontconfig prepend 'sysroot'
+to the cache directories in order to allow people to generate caches at
+the build time. Note that this causes changing current config. i.e.
+this function calls FcConfigSetCurrent() internally.
 	    </P
 ></DIV
 ><DIV
 CLASS="REFSECT1"
 ><A
-NAME="AEN2315"
+NAME="AEN3457"
 ></A
 ><H2
 >Version</H2
 ><P
->Fontconfig version 2.8.0
+>Fontconfig version 2.11.0
 
 	    </P
 ></DIV
@@ -170,7 +166,7 @@ WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
 ><A
-HREF="fclangsethaslang.html"
+HREF="fcconfiggetsysroot.html"
 ACCESSKEY="P"
 >&#60;&#60;&#60; Previous</A
 ></TD
@@ -187,24 +183,20 @@ ACCESSKEY="H"
 WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
-><A
-HREF="fcgetlangs.html"
-ACCESSKEY="N"
->Next &#62;&#62;&#62;</A
-></TD
+>&nbsp;</TD
 ></TR
 ><TR
 ><TD
 WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
->FcLangSetHasLang</TD
+>FcConfigGetSysRoot</TD
 ><TD
 WIDTH="34%"
 ALIGN="center"
 VALIGN="top"
 ><A
-HREF="x102.html#AEN2066"
+HREF="x102.html#AEN2703"
 ACCESSKEY="U"
 >Up</A
 ></TD
@@ -212,7 +204,7 @@ ACCESSKEY="U"
 WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
->FcGetLangs</TD
+>&nbsp;</TD
 ></TR
 ></TABLE
 ></DIV
