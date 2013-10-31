@@ -36,6 +36,12 @@ pushd "$FONTCONFIG_SOURCE_DIR"
             LDFLAGS="-m32  -L$stage/packages/lib/release" CFLAGS="-m32" CXXFLAGS="-m32" ./configure --prefix="$stage"
             make
             make install
+
+            # conditionally run unit tests
+            if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
+                make check
+            fi
+
             mv "$stage/lib" "$stage/release"
             mkdir -p "$stage/lib"
             mv "$stage/release" "$stage/lib"
