@@ -42,9 +42,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>f391b2d2a758e1caec10b863d7b94fcc</string>
+              <string>fdb4a669abfbdde37a520f9567150f12</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-freetype-update/rev/290255/arch/Linux/installer/freetype-2.4.4-linux-20140524.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-freetype-update/rev/290407/arch/Linux/installer/freetype-2.4.4-linux-20140529.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -66,9 +66,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>8db178c604df50682d85bb8a78065903</string>
+              <string>276ec6b65c0c3d4ea9c2306580a80578</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-zlib-update/rev/290080/arch/Linux/installer/zlib-1.2.8-linux-20140515.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-zlib-update/rev/290390/arch/Linux/installer/zlib-1.2.8-linux-20140529.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
