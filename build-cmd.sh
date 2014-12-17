@@ -15,7 +15,6 @@ if [ "$OSTYPE" = "cygwin" ] ; then
     export AUTOBUILD="$(cygpath -u $AUTOBUILD)"
 fi
 
-FONTCONFIG_VERSION=2.11.0
 FONTCONFIG_SOURCE_DIR="fontconfig"
 
 
@@ -134,10 +133,12 @@ pushd "$FONTCONFIG_SOURCE_DIR"
 
     mkdir -p "$stage/LICENSES"
     cp COPYING "$stage/LICENSES/fontconfig.txt"
+
 popd
 
 mkdir -p "$stage"/docs/fontconfig/
 cp -a README.Linden "$stage"/docs/fontconfig/
 
+sed -n -E "s/PACKAGE_VERSION='([0-9.]+)'.*/\\1/p" "$FONTCONFIG_SOURCE_DIR/configure" > "$stage/VERSION.txt"
 pass
 
