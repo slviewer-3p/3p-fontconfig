@@ -64,16 +64,28 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>1ac3152b440287c58509d8af0a50326d</string>
+              <string>a75a636a86e598017529c7a1fffa562e</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/freetype_3p-update-freetype/rev/297053/arch/Linux/installer/freetype-2.4.4.297053-linux-297053.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-freetype/rev/312702/arch/Linux/installer/freetype-2.4.4.312702-linux-312702.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
           </map>
+          <key>linux64</key>
+          <map>
+            <key>archive</key>
+            <map>
+              <key>hash</key>
+              <string>463eb3b6af29a636c925d99e5c01d87a</string>
+              <key>url</key>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-freetype/rev/312702/arch/Linux/installer/freetype-2.4.4.312702-linux64-312702.tar.bz2</string>
+            </map>
+            <key>name</key>
+            <string>linux64</string>
+          </map>
         </map>
         <key>version</key>
-        <string>2.4.4.297053</string>
+        <string>2.4.4.312702</string>
       </map>
       <key>zlib</key>
       <map>
