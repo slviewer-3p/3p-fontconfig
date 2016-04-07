@@ -22,16 +22,28 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>f546615d76bc0f9e8bc2b9ef89f0ca86</string>
+              <string>20976bed8203a5ad365b3196882877aa</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/expat_3p-update-expat/rev/297014/arch/Linux/installer/expat-2.0.1.297014-linux-297014.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-expat/rev/313711/arch/Linux/installer/expat-2.1.1.313711-linux-313711.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
           </map>
+          <key>linux64</key>
+          <map>
+            <key>archive</key>
+            <map>
+              <key>hash</key>
+              <string>5a13b6cca3bcb192b711c46ae3524059</string>
+              <key>url</key>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-expat/rev/313711/arch/Linux/installer/expat-2.1.1.313711-linux64-313711.tar.bz2</string>
+            </map>
+            <key>name</key>
+            <string>linux64</string>
+          </map>
         </map>
         <key>version</key>
-        <string>2.0.1.297014</string>
+        <string>2.1.1.313711</string>
       </map>
       <key>freetype</key>
       <map>
@@ -82,16 +94,28 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>2eb8e59b6464222dcf4435016ad5f618</string>
+              <string>1bcb914c438d631c2165ce28d9577883</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/zlib_3p-update-zlib/rev/296881/arch/Linux/installer/zlib-1.2.8.296881-linux-296881.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-zlib/rev/312301/arch/Linux/installer/zlib-1.2.8.312301-linux-312301.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
           </map>
+          <key>linux64</key>
+          <map>
+            <key>archive</key>
+            <map>
+              <key>hash</key>
+              <string>e4ea1935da59d3c03e1c06e776b0c5e3</string>
+              <key>url</key>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-zlib/rev/312301/arch/Linux/installer/zlib-1.2.8.312301-linux64-312301.tar.bz2</string>
+            </map>
+            <key>name</key>
+            <string>linux64</string>
+          </map>
         </map>
         <key>version</key>
-        <string>1.2.8.296881</string>
+        <string>1.2.8.312301</string>
       </map>
     </map>
     <key>orig_ver</key>
@@ -136,8 +160,6 @@
           <key>manifest</key>
           <array>
             <string>include/fontconfig/*.h</string>
-            <string>lib/debug/*.a</string>
-            <string>lib/debug/*.so*</string>
             <string>lib/release/*.a</string>
             <string>lib/release/*.so*</string>
             <string>docs/fontconfig/README.Linden</string>
