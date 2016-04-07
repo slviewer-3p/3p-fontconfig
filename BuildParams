@@ -3,6 +3,3 @@ public_build = true
 
 build_Darwin = false
 build_CYGWIN = false
-
-# Autobuild uses VS2010
-AUTOBUILD_VSVER=100
