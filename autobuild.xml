@@ -64,9 +64,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>a75a636a86e598017529c7a1fffa562e</string>
+              <string>1b401394106cedc86926bd488f5aa45e</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-freetype/rev/312702/arch/Linux/installer/freetype-2.4.4.312702-linux-312702.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-freetype/rev/314215/arch/Linux/installer/freetype-2.4.4.314215-linux-314215.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -76,16 +76,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>463eb3b6af29a636c925d99e5c01d87a</string>
+              <string>e3cb22666913d8d4d270648d00c38682</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-freetype/rev/312702/arch/Linux/installer/freetype-2.4.4.312702-linux64-312702.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-freetype/rev/314215/arch/Linux/installer/freetype-2.4.4.314215-linux64-314215.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
           </map>
         </map>
         <key>version</key>
-        <string>2.4.4.312702</string>
+        <string>2.4.4.314215</string>
       </map>
       <key>zlib</key>
       <map>
@@ -106,9 +106,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>1bcb914c438d631c2165ce28d9577883</string>
+              <string>98a8c775c581ca80bb559e8b4e8eaae7</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-zlib/rev/312301/arch/Linux/installer/zlib-1.2.8.312301-linux-312301.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-zlib/rev/314131/arch/Linux/installer/zlib-1.2.8.314131-linux-314131.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -118,16 +118,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>e4ea1935da59d3c03e1c06e776b0c5e3</string>
+              <string>37750458efb8efc3deab0869c492d899</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-zlib/rev/312301/arch/Linux/installer/zlib-1.2.8.312301-linux64-312301.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-zlib/rev/314131/arch/Linux/installer/zlib-1.2.8.314131-linux64-314131.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
           </map>
         </map>
         <key>version</key>
-        <string>1.2.8.312301</string>
+        <string>1.2.8.314131</string>
       </map>
     </map>
     <key>orig_ver</key>
