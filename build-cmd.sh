@@ -21,16 +21,11 @@ fi
 
 FONTCONFIG_SOURCE_DIR="fontconfig"
 
+stage="$(pwd)/stage"
 
 # load autobuild provided shell functions and variables
-set +x
-eval "$("$autobuild" source_environment)"
-set -x
-
-# set LL_BUILD and friends
-set_build_variables convenience Release
-
-stage="$(pwd)/stage"
+"$autobuild" source_environment > "$stage/variables_setup.sh" || exit 1
+. "$stage/variables_setup.sh"
 
 ZLIB_INCLUDE="${stage}"/packages/include/zlib
 
