@@ -120,4 +120,3 @@ mkdir -p "$stage"/docs/fontconfig/
 cp -a README.Linden "$stage"/docs/fontconfig/
 
 sed -n -E "s/PACKAGE_VERSION='([0-9.]+)'.*/\\1/p" "$FONTCONFIG_SOURCE_DIR/configure" > "$stage/VERSION.txt"
-pass
