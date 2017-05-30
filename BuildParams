@@ -3,3 +3,4 @@ public_build = true
 
 build_Darwin = false
 build_CYGWIN = false
+buildscripts_shared_more_NAMEs="build_variables"
