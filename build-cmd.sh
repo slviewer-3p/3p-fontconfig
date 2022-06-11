@@ -19,7 +19,7 @@ else
     autobuild="$AUTOBUILD"
 fi
 
-FONTCONFIG_SOURCE_DIR="fontconfig"
+FONTCONFIG_SOURCE_DIR="fontconfig-2.13.1"
 
 stage="$(pwd)/stage"
 
@@ -83,9 +83,13 @@ pushd "$FONTCONFIG_SOURCE_DIR"
             # Make-time LDFLAGS adds an --exclude-libs option to prevent
             # re-export of archive symbols.
 
+	    autoreconf
+	    export PKG_CONFIG_PATH=$stage/packages/lib/release/pkgconfig
             CFLAGS="$opts" \
                 CXXFLAGS="$opts" \
                 LDFLAGS="$opts -L$stage/packages/lib/release/" \
+		FREETYPE_CFLAGS="-I$stage/packages/include/freetype2 -I$stage/packages/include/" \
+		FREETYPE_LIBS="$stage/packages/lib/release/libfreetype.a $stage/packages/lib/release/libz.a" \
                 ./configure \
                 --enable-static --enable-shared --disable-docs \
                 --with-pic --without-pkgconfigdir --disable-silent-rules \
