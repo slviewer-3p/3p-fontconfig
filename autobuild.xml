@@ -34,16 +34,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>5e1f025d1cebd12db542080aa755257f</string>
+              <string>2e9d90adc83683a5d9fba9f999418a64</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/380/943/expat-2.1.1.500375-linux64-500375.tar.bz2</string>
+              <string>jf://packages/linux64/expat-2.1.1.221621521-linux64_bionic-221621521.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
           </map>
         </map>
         <key>version</key>
-        <string>2.1.1.313711</string>
+        <string>2.1.1.221621521</string>
       </map>
       <key>freetype</key>
       <map>
@@ -76,16 +76,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>94cf61dfdbc86aae5bbaf0b5cb8a366c</string>
+              <string>94acb2c8c87de299215f5963e821fa17</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/874/1914/freetype-2.4.4.500865-linux64-500865.tar.bz2</string>
+              <string>jf://packages/linux64/freetype-2.12.1.221612253-linux64_bionic-221612253.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
           </map>
         </map>
         <key>version</key>
-        <string>2.4.4.314215</string>
+        <string>2.12.1.221612253</string>
       </map>
       <key>zlib</key>
       <map>
@@ -118,22 +118,24 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>dab6be8b0596c1e3354f2b6d41335131</string>
+              <string>ecaa51df1bc359dfba7676373a1b86c6</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/866/1898/zlib-1.2.8.500857-linux64-500857.tar.bz2</string>
+              <string>jf://packages/linux64/zlib-1.2.11.221612031-linux64_bionic-221612031.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
           </map>
         </map>
         <key>version</key>
-        <string>1.2.8.314131</string>
+        <string>1.2.11.221612031</string>
       </map>
     </map>
     <key>orig_ver</key>
     <string>1.2</string>
     <key>package_description</key>
     <map>
+      <key>canonical_repo</key>
+      <string>https://bitbucket.org/nickyd/3p-fontconfig</string>
       <key>copyright</key>
       <string>Copyright (C) 2000,2001,2002,2003,2004,2006,2007 Keith Packard, 2005 Patrick Lam, 2009 Roozbeh Pournader, 2008,2009 Red Hat, Inc., 2008 Danilo Šegan, 2012 Google, Inc.</string>
       <key>description</key>
