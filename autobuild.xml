@@ -106,9 +106,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>16ed3dd6f80efecd34cd98663564708e</string>
+              <string>50f88582b1732d0a3b8023795701a03b</string>
               <key>url</key>
-              <string>jf://packages/linux64/libuuid-1.6.2-linux64_bionic-221732119.tar.bz2</string>
+              <string>jf://packages/linux64/libuuid-1.6.2-linux64_bionic-221732144.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
