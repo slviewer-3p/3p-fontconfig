@@ -27,7 +27,7 @@ stage="$(pwd)/stage"
 "$autobuild" source_environment > "$stage/variables_setup.sh" || exit 1
 . "$stage/variables_setup.sh"
 
-ZLIB_INCLUDE="${stage}"/packages/include/zlib
+ZLIB_INCLUDE="${stage}"/packages/include/zlib-ng
 
 [ -f "$ZLIB_INCLUDE"/zlib.h ] || fail "You haven't yet run 'autobuild install'."
 
