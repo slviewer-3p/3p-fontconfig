@@ -19,7 +19,7 @@ else
     autobuild="$AUTOBUILD"
 fi
 
-FONTCONFIG_SOURCE_DIR="fontconfig-2.13.1"
+FONTCONFIG_SOURCE_DIR="fontconfig-2.12.6"
 
 stage="$(pwd)/stage"
 
@@ -35,27 +35,6 @@ pushd "$FONTCONFIG_SOURCE_DIR"
     case "$AUTOBUILD_PLATFORM" in
 
         linux*)
-            # Linux build environment at Linden comes pre-polluted with stuff that can
-            # seriously damage 3rd-party builds.  Environmental garbage you can expect
-            # includes:
-            #
-            #    DISTCC_POTENTIAL_HOSTS     arch           root        CXXFLAGS
-            #    DISTCC_LOCATION            top            branch      CC
-            #    DISTCC_HOSTS               build_name     suffix      CXX
-            #    LSDISTCC_ARGS              repo           prefix      CFLAGS
-            #    cxx_version                AUTOBUILD      SIGN        CPPFLAGS
-            #
-            # So, clear out bits that shouldn't affect our configure-directed build
-            # but which do nonetheless.
-            #
-            # unset DISTCC_HOSTS CC CXX CFLAGS CPPFLAGS CXXFLAGS
-
-##          # Prefer gcc-4.6 if available.
-##          if [[ -x /usr/bin/gcc-4.6 && -x /usr/bin/g++-4.6 ]]; then
-##              export CC=/usr/bin/gcc-4.6
-##              export CXX=/usr/bin/g++-4.6
-##          fi
-
             # Default target per autobuild --address-size
             opts="${TARGET_OPTS:--m$AUTOBUILD_ADDRSIZE $LL_BUILD}"
 
@@ -85,23 +64,24 @@ pushd "$FONTCONFIG_SOURCE_DIR"
 
 	    autoreconf
 	    export PKG_CONFIG_PATH=$stage/packages/lib/release/pkgconfig
+	    export CXXFLAGS="$opts"
+            export LDFLAGS="$opts -L$stage/packages/lib/release/"
+	    export FREETYPE_CFLAGS="-I$stage/packages/include/freetype2 -I$stage/packages/include/"
+            export LDFLAGS="$opts -L$stage/packages/lib/release/ -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
+	    
             CFLAGS="$opts" \
-                CXXFLAGS="$opts" \
-                LDFLAGS="$opts -L$stage/packages/lib/release/" \
-		FREETYPE_CFLAGS="-I$stage/packages/include/freetype2 -I$stage/packages/include/" \
-		FREETYPE_LIBS="$stage/packages/lib/release/libfreetype.a $stage/packages/lib/release/libz.a" \
                 ./configure \
                 --enable-static --enable-shared --disable-docs \
-                --with-pic --without-pkgconfigdir --disable-silent-rules \
+                --with-pic --disable-silent-rules \
                 --with-expat-includes="$stage"/packages/include/expat/ \
                 --with-expat-lib="$stage"/packages/lib/release/ \
                 --prefix="$stage" --libdir="$stage"/lib/release/
-            make LDFLAGS="$opts -L$stage/packages/lib/release/ -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
-            make install LDFLAGS="$opts -L$stage/packages/lib/release/ -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
+            make 
+            make install
 
             # conditionally run unit tests
             if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
-                make check LDFLAGS="$opts -L$stage/packages/lib/release/ -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
+                make check
             fi
 
             make distclean 
