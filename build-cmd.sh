@@ -36,7 +36,7 @@ pushd "$FONTCONFIG_SOURCE_DIR"
 
         linux*)
             # Default target per autobuild --address-size
-            opts="${TARGET_OPTS:--m$AUTOBUILD_ADDRSIZE $LL_BUILD}"
+            opts="${TARGET_OPTS:-${AUTOBUILD_GCC_ARCH} $LL_BUILD}"
 
             # Handle any deliberate platform targeting
             if [ -z "${TARGET_CPPFLAGS:-}" ]; then
